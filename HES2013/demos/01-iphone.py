@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-import frida
+import plawnekjx
 import sys
 import threading
 
-m = frida.get_device_manager()
+m = plawnekjx.get_device_manager()
 
 def get_iphone():
     changed = threading.Event()

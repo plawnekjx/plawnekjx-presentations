@@ -1,7 +1,7 @@
-import frida
+import plawnekjx
 import sys
 
-process = frida.attach("hello")
+process = plawnekjx.attach("hello")
 session = process._session
 script = session.create_script("send(1337);") # try replacing 1337 with an undefined variable to see how errors are propagated
 def on_message(message, data):

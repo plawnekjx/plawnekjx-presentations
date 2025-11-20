@@ -1,11 +1,11 @@
 const co = require('co');
-const frida = require('frida');
-const load = require('frida-load');
+const plawnekjx = require('plawnekjx');
+const load = require('plawnekjx-load');
 
 let session, script;
 co(function *() {
-  const device = yield frida.getUsbDevice();
-  session = yield device.attach('re.frida.helloworld');
+  const device = yield plawnekjx.getUsbDevice();
+  session = yield device.attach('re.plawnekjx.helloworld');
   const source = yield load(
       require.resolve('./agent.js'));
   script = yield session.createScript(source);

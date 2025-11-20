@@ -1,10 +1,10 @@
 const co = require('co');
-const frida = require('frida');
+const plawnekjx = require('plawnekjx');
 
 let device;
 
 co(function *() {
-  device = yield frida.getUsbDevice();
+  device = yield plawnekjx.getUsbDevice();
 
   device.events.listen('spawned', onSpawned);
   device.enableSpawnGating();

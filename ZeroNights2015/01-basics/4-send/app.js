@@ -1,10 +1,10 @@
 const co = require('co');
-const frida = require('frida');
-const load = require('frida-load');
+const plawnekjx = require('plawnekjx');
+const load = require('plawnekjx-load');
 
 let session, script;
 co(function *() {
-  session = yield frida.attach('hello');
+  session = yield plawnekjx.attach('hello');
   const source = yield load(
       require.resolve('./agent.js'));
   script = yield session.createScript(source);

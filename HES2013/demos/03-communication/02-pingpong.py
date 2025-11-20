@@ -1,7 +1,7 @@
-import frida
+import plawnekjx
 import sys
 
-process = frida.attach("hello")
+process = plawnekjx.attach("hello")
 session = process._session
 script = session.create_script("""
     recv('poke', function onMessage(pokeMessage) { send('pokeBack'); });
